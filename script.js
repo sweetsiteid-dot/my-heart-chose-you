@@ -24,6 +24,8 @@ function openGift(){
 const music =
 document.getElementById("music");
 
+music.currentTime = 0;
+
 music.play();
 
 document.getElementById("giftSection")
@@ -313,23 +315,4 @@ font-size:13px;
 
 document.head.appendChild(
 quoteStyle
-);
-
-/* AUTOPLAY MUSIC AFTER FIRST TAP */
-
-document.addEventListener(
-"click",
-function(){
-
-const music =
-document.getElementById("music");
-
-if(music.paused){
-
-music.play().catch(()=>{});
-
-}
-
-},
-{once:true}
 );
